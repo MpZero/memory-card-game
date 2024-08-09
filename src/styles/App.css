@@ -74,19 +74,19 @@ img {
     circle,
     rgba(175, 178, 185, 1) 0%,
     rgba(205, 206, 215, 1) 41%,
-    rgba(255, 255, 255, 1) 77%
+    rgba(255, 255, 255, 1) 65%
   );
   background: -webkit-radial-gradient(
     circle,
     rgba(175, 178, 185, 1) 0%,
     rgba(205, 206, 215, 1) 41%,
-    rgba(255, 255, 255, 1) 77%
+    rgba(255, 255, 255, 1) 65%
   );
   background: radial-gradient(
     circle,
     rgba(175, 178, 185, 1) 0%,
     rgba(205, 206, 215, 1) 41%,
-    rgba(255, 255, 255, 1) 77%
+    rgba(255, 255, 255, 1) 65%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#afb2b9",endColorstr="#ffffff",GradientType=1);
 }
@@ -143,8 +143,8 @@ img {
   display: grid;
   grid-template-columns: repeat(3, auto);
   justify-content: space-evenly;
-  gap: 0.6em;
-  padding: 0.5em;
+  gap: 0.9em;
+  padding: 0.8em;
 }
 
 .card {
