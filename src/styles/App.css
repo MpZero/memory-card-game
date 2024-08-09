@@ -3,9 +3,9 @@
 :root {
   --shadow-color: 0deg 0% 0%;
   --shadow-elevation-low: 0.7px 0.6px 1.4px hsl(var(--shadow-color) / 0),
-    2.2px 2.2px 4px hsl(var(--shadow-color) / 0.23);
+    1px 2px 1px 1px hsl(var(--shadow-color) / 0.23);
   --shadow-elevation-medium: 0.7px 0.6px 1.4px hsl(var(--shadow-color) / 0),
-    18.5px 16.1px 36.8px hsl(var(--shadow-color) / 0.33);
+    4px 5px 5px 1px hsl(var(--shadow-color) / 0.33);
   --shadow-elevation-high: 0.7px 0.6px 1.4px hsl(var(--shadow-color) / 0),
     35.3px 30.6px 70.1px hsl(var(--shadow-color) / 0.27),
     111.2px 96.5px 220.9px hsl(var(--shadow-color) / 0.54);
@@ -96,8 +96,28 @@ img {
 body {
   text-align: center;
   font-size: 20px;
+  background: rgb(47, 220, 209);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(47, 220, 209, 1) 0%,
+    rgba(43, 66, 125, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(47, 220, 209, 1) 0%,
+    rgba(43, 66, 125, 1) 100%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(47, 220, 209, 1) 0%,
+    rgba(43, 66, 125, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2fdcd1",endColorstr="#2b427d",GradientType=1);
 }
 
+header {
+  background: white;
+}
 h2 {
   padding: 0.5em;
 }
@@ -108,7 +128,11 @@ h2 {
   grid-template-columns: auto auto;
   padding: 0.3em;
   border-top: 1px solid gray;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid black;
+}
+
+.score-wrapper > p {
+  padding: 10px;
 }
 
 img {
@@ -129,9 +153,24 @@ img {
   border-radius: 8px;
   padding: 1em;
   box-shadow: var(--shadow-elevation-low);
+  transition: all 250ms;
+  cursor: pointer;
+  background-color: white;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-elevation-medium);
+
+  .card-name-wrapper {
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+  }
 }
 
 .card-name-wrapper {
+  transition: all 250ms ease-in;
   margin-bottom: 0.5em;
   border-bottom: 1px solid black;
 }
@@ -173,7 +212,6 @@ img {
 @media screen and (min-width: 1280px) {
   .card-wrapper {
     grid-template-columns: repeat(6, auto);
-    margin-top: 0.4em;
     padding: 0.5em;
     gap: 0.8em;
     font-size: 1.2em;
