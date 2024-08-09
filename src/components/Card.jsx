@@ -5,7 +5,9 @@ const Card = (props) => {
 
   return (
     <div className="card" onClick={() => handleCardClick(image)}>
-      <p>{image.name}</p>
+      <div className="card-name-wrapper">
+        <p>{image.name[0].toUpperCase() + image.name.slice(1)}</p>
+      </div>
       <img
         src={image.sprites.other["official-artwork"].front_default}
         alt={image.name}
